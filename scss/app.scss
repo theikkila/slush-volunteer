@@ -1,0 +1,170 @@
+@import "settings";
+@import "foundation";
+@import "http://fonts.googleapis.com/css?family=Open+Sans:800,600|Open+Sans+Condensed:700";
+
+.extra-padding {
+    padding-top: 30px;
+}
+
+// .shadow {
+//    box-shadow: 0px 3px 6px 2px #888888 !important;
+// }
+
+.apply {
+    position: absolute;
+    top: 0px;
+}
+
+.pricing-table {
+    box-shadow: 2px 2px 5px #888888;
+ }
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.60), 
+      rgba(0, 0, 0, 0.60)), 
+      url(/img/bg1.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+    transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+    text-align: center;
+    max-width: 900px;
+}
+
+.hero-title {
+    color: white !important;
+    font-size: 4rem;
+}
+
+.hero-sub {
+    color: white !important;
+    font-size: 1.5rem;
+//    font-family: "Open Sans";
+//    font-weight: 300;
+}
+
+.hero-more {
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+    transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+    text-align: center;
+    max-width: 900px;
+    color: white !important;
+    text-align: center;
+}
+
+.icon {
+    width: 36px;
+    height: 36px;
+    -webkit-filter:invert(100%);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(invert='1');
+}
+
+.hero-img {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+    transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+    text-align: center;
+    max-width: 900px;
+    
+}
+
+.bounce {
+  position:absolute;
+  left:50%;
+  bottom:0;
+  margin-top:-25px;
+  margin-left:-25px;
+  height:50px;
+  width:50px;
+  -webkit-animation:bounce 1s infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%{
+    bottom:5px;
+  }
+  
+  25%, 75% {
+    bottom:8px;
+  }
+  
+  
+  50% {
+    bottom:10px;
+  }
+  
+  100% {
+    bottom:0;
+  }
+}
+
+.footer {
+    background-color: #F2F2F2;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+// Or selectively include components
+// @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+//   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+//   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+//   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switches",
+//   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+//   "foundation/components/top-bar",
+//   "foundation/components/type",
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
