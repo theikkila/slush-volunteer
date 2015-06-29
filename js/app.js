@@ -1,5 +1,10 @@
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
+
+// Timing submit time
+var start = Date.now();
+
+
 $(document).foundation();
 
 // Data Abide Checkbox Group Validation
@@ -22,6 +27,23 @@ $(document).foundation({
             }
         }
     }
+});
+
+$('#register').on('valid.fndtn.abide', function() {
+  // Handle the submission of the form
+  var data = {
+    data: $(this).serializeArray(),
+    time_to_submit: (Date.now() - start)
+  };
+  $.ajax({url: "https://aleksandria.slush.org/documents/volunteer-application", method: 'POST', data: JSON.stringify(data)})
+  .done(function (doc) {
+      // if successful returnes created document, show happy congratz-dialog
+      console.log(doc);
+      alert("Success!!!");
+  }).fail(function () {
+      // Something happened during submit, show alert.
+      alert("Fail.. We're sorry!");
+  });
 });
 
 // Smooth scroll for in page links
