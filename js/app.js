@@ -3,7 +3,8 @@
 
 // Timing submit time
 var start = Date.now();
-
+//var endpoint = "https://aleksandria.slush.org";
+var endpoint = "http://localhost:8080";
 
 $(document).foundation();
 
@@ -35,14 +36,21 @@ $('#register').on('valid.fndtn.abide', function() {
     data: $(this).serializeArray(),
     time_to_submit: (Date.now() - start)
   };
-  $.ajax({url: "https://aleksandria.slush.org/documents/volunteer-application", method: 'POST', data: JSON.stringify(data)})
+  $.ajax({
+    url: endpoint + "/documents/volunteer-application",
+    method: 'POST',
+    data: JSON.stringify(data),
+    headers: {'content-type': "application/json; charset=utf-8"}})
   .done(function (doc) {
       // if successful returnes created document, show happy congratz-dialog
-      console.log(doc);
-      alert("Success!!!");
+      alertify.log("Your application has successfully received! Thank you!", "success");
+      alertify.log("You will be redirected in 2 seconds...", "success");
+      setTimeout(function () {
+          window.location = "http://www.slush.org/";
+      }, 3000);
   }).fail(function () {
       // Something happened during submit, show alert.
-      alert("Fail.. We're sorry!");
+      alertify.error("Oh! Sorry, something nasty happened! Please try again later or contact us!");
   });
 });
 
