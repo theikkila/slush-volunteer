@@ -3,8 +3,8 @@
 
 // Timing submit time
 var start = Date.now();
-//var endpoint = "https://aleksandria.slush.org";
-var endpoint = "http://localhost:8080";
+var endpoint = "https://aleksandria.slush.org";
+//var endpoint = "http://localhost:8080";
 
 $(document).foundation();
 
