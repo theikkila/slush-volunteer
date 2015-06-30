@@ -9454,22 +9454,21 @@ th.hide-for-touch {
 
 /* line 17, ../scss/app.scss */
 .paragraph {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  text-align: left;
 }
 
-/* line 26, ../scss/app.scss */
+/* line 25, ../scss/app.scss */
 .apply {
   position: absolute;
   top: 0px;
 }
 
-/* line 31, ../scss/app.scss */
+/* line 30, ../scss/app.scss */
 .pricing-table {
   box-shadow: 2px 2px 5px #888888;
 }
 
-/* line 35, ../scss/app.scss */
+/* line 34, ../scss/app.scss */
 .hero {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bg1.jpg) no-repeat center center fixed;
@@ -9479,7 +9478,7 @@ th.hide-for-touch {
   background-size: cover;
 }
 
-/* line 47, ../scss/app.scss */
+/* line 46, ../scss/app.scss */
 .hero-content {
   position: absolute;
   top: 30%;
@@ -9492,6 +9491,7 @@ th.hide-for-touch {
   -ms-transform: translateX(-50%);
   text-align: center;
   max-width: 900px;
+  padding: 0px 50px;
 }
 
 /* line 61, ../scss/app.scss */
@@ -9575,4 +9575,14 @@ th.hide-for-touch {
 /* line 141, ../scss/app.scss */
 .footer {
   background-color: #F2F2F2;
+}
+/* line 144, ../scss/app.scss */
+.footer .paragraph {
+  padding: 20px;
+}
+
+/* line 149, ../scss/app.scss */
+.content-area {
+  height: 82vh !important;
+  padding: 20px;
 }
