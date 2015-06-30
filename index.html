@@ -32,30 +32,26 @@
     <div class="hero-more">
        <p class="show-for-medium-up">Scroll down to read more!</p>
    </div>
-   <div class="bounce"><a href="#content" class="smoothScroll"><img src="/img/down.svg" class="icon"></a></div>
+   <div class="bounce"><a href="#content" class="smoothScroll"><img src="img/down.svg" class="icon"></a></div>
 </div>
-<div id="content">
-   <div class="sticky contain-to-grid">     
-      <nav class="top-bar" data-topbar role="navigation">
-        <div class="row text-center"><img src="img/Black_RGB_ForDigitalUse.png" width="120px" height="40px"></div>
-    </nav>
-</div>
-<div class="row content-area">
+
+<div class="row content-area" id="content">
   <div class="medium-12 columns text-center">
+    <div class="row text-center"><img src="img/Black_RGB_ForDigitalUse.png" style="width:300px;"></div>
+    <br>
     <h2>Why volunteer?</h2>
     <div class="row paragraph">
       <p>There are plenty of reasons to volunteer at Slush in 2015. The event draws together a crowd of 15.000 tech entrepreneurs, VCs and journalists to Helsinki, Finland on November 11-12, 2015.</p>
 
-      <p>Volunteers will be helping out in various tasks during the event week. We have about 30 different tasks where volunteers can work and so on there is something for everyone. You will meet interesting people, learn a lot of new things and see the whole event from the inside.Volunteer spots are in high demand and new volunteers are chosen continuously – so apply as soon as possible. The application period ends on 10.09.2015 and every applicant will be informed of the outcome by 24.09.2015 the latest.</p>
+      <p>Volunteers will be helping out in various tasks during the event week. We have about 30 different tasks where volunteers can work, so on there is definitely something for everyone. You will meet interesting people, learn a lot of new things and get a chance to see the how one of the biggest startup and tech events in the world is made - from the inside. Volunteer spots are in high demand and new volunteers are chosen continuously – so apply as soon as possible. The application period ends on 10.09.2015 and every applicant will be informed of the outcome by 24.09.2015 the latest.</p>
 
-      <p><a href="#" data-reveal-id="apply-modal"><button class="extend">Apply now</button></a></p>
+      <p class="text-center"><a href="#" data-reveal-id="apply-modal"><button class="extend" style="font-size:2rem;margin:25px;">Apply now</button></a></p>
+
+      <div class="small-12 columns text-center paragraph" style="padding-bottom:20px;">
+        If you have any questions concerning volunteering at Slush 2015, please send them to <a href="mailto:volunteers@slush.org">volunteer@slush.org</a>
+      </div>
   </div>
 </div>
-</div>
-<div class="footer">
-    <div class="small-12 columns text-center paragraph">
-      If you have any questions concerning volunteering at Slush 2015, please send them to <a href="mailto:volunteers@slush.org">volunteer@slush.org</a>
-  </div>    
 </div>
 
 <div id="apply-modal" class="reveal-modal apply" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
@@ -73,13 +69,13 @@
               <legend>Basic information</legend>
               <div class="name-field">
                 <label>Name
-                  <input type="text" name="firstname" placeholder="First name" required pattern="alpha">
-                  <input type="text" name="lastname" placeholder="Last name" required pattern="alpha">
+                  <input type="text" name="firstname" placeholder="First name" required pattern="[a-zA-ZäöåøæÄÖÅØÆ]+"></input>
+                  <input type="text" name="lastname" placeholder="Last name" required pattern="[a-zA-ZäöåøæÄÖÅØÆ]+">
                   <small class="error">Name is required and needs to be a string.</small></label>
               </div>
               <div class="age-field">
-                  <label>Date of Birth
-                    <input type="date" name="birthday" placeholder="Date of Birth" required>
+                  <label>Age
+                    <input type="number" name="birthday" placeholder="Age" required>
                     <small class="error">Please insert your age in numeric form.</small></label>
                 </div>
                 <div class="email-field">
@@ -97,7 +93,7 @@
                         <small class="error">Phone number is a required field.</small></label>
                     </div>
                     <div class="residence-field"><label>Where do you currently live?
-                        <input type="text" name="city" placeholder="City or country" required pattern="alpha">
+                        <input type="text" name="city" placeholder="City or country" required pattern="[a-zA-ZäöåøæÄÖÅØÆ]">
                         <small class="error">Residence is a required field.</small></label>
                     </div>
                     <div class="nationality-field"><label>Where are you from?
@@ -146,7 +142,7 @@
             <fieldset>
                 <legend>What would you like to do at Slush 2015?</legend>
 
-                <label>Choose all the different tasks you are interested in (at least three):</label>
+                <label>Here you can choose all the different tasks that you are interested in (at least three). If you are interested in all tasks you can mark here the ones you prefer and click ”I'm interested in any open positions” in the end of the form.</label>
                 <div class="checkbox-group" data-abide-validator-min="3"> 
                   <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3">
                     <li>

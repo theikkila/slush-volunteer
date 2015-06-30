@@ -15,8 +15,7 @@
 }
 
 .paragraph {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    text-align: left;
 }
 
 // .shadow {
@@ -37,7 +36,7 @@
     background: linear-gradient(
       rgba(0, 0, 0, 0.60), 
       rgba(0, 0, 0, 0.60)), 
-      url(/img/bg1.jpg) no-repeat center center fixed; 
+      url(../img/bg1.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -56,6 +55,7 @@
           -ms-transform: translateX(-50%);
     text-align: center;
     max-width: 900px;
+    padding: 0px 50px;
 }
 
 .hero-title {
@@ -139,8 +139,19 @@
 }
 
 .footer {
-    background-color: #F2F2F2;
+  background-color: #F2F2F2;
+
+  .paragraph {
+    padding: 20px;
+  }
 }
+
+.content-area{
+  height: 82vh !important;
+  padding: 20px;
+}
+
+
 
 // Or selectively include components
 // @import
