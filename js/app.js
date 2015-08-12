@@ -32,6 +32,8 @@ $(document).foundation({
 
 $('#register').on('valid.fndtn.abide', function() {
   // Handle the submission of the form
+  ga('send', 'event', 'application', 'submit');
+  $("#submit-btn").attr('disabled', 1);
   var data = {
     data: $(this).serializeArray(),
     time_to_submit: (Date.now() - start)
@@ -42,13 +44,19 @@ $('#register').on('valid.fndtn.abide', function() {
     data: JSON.stringify(data),
     headers: {'content-type': "application/json; charset=utf-8"}})
   .done(function (doc) {
+      $("#submit-btn").attr('disabled', 0);
       // if successful returnes created document, show happy congratz-dialog
-      alertify.log("Your application has successfully received! Thank you!", "success");
-      alertify.log("You will be redirected in 2 seconds...", "success");
+      Raven.captureMessage('application submit succeed')
+      $('#apply-submit').foundation('reveal', 'open');
+      alertify.log("Application saved!", "success");
+      alertify.log("You will be redirected in 15 seconds...", "success");
       setTimeout(function () {
+          Raven.captureMessage('Application is redirecting...')
           window.location = "http://www.slush.org/";
-      }, 3000);
+      }, 15000);
   }).fail(function () {
+      $("#submit-btn").attr('disabled', 0);
+      Raven.captureMessage('application submit failed')
       // Something happened during submit, show alert.
       alertify.error("Oh! Sorry, something nasty happened! Please try again later or contact us!");
   });

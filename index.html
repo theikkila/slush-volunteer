@@ -4,9 +4,15 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Slush 2015 Volunteer Application</title>
+  <script type="text/javascript">
+  if (window.location.protocol != "https:"){
+    window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+  }
+  </script>
   <link rel="stylesheet" href="stylesheets/app.css" />
   <link rel="stylesheet" href="stylesheets/alertify.css" />
   <script src="bower_components/modernizr/modernizr.js"></script>
+  <script src="//cdn.ravenjs.com/1.1.15/jquery,native/raven.min.js"></script>
   <style>
     @font-face { font-family: knockout-title;   src: url('stylesheets/fonts/Knockout-66.otf'); }
     @font-face { font-family: knockout-heading; src: url('stylesheets/fonts/Knockout-70.otf'); } 
@@ -49,7 +55,7 @@
       <p class="text-center"><a href="#" data-reveal-id="apply-modal"><button class="extend" style="font-size:2rem;margin:25px;">Apply now</button></a></p>
 
       <div class="small-12 columns text-center paragraph" style="padding-bottom:20px;">
-        If you have any questions concerning volunteering at Slush 2015, please send them to <a href="mailto:volunteers@slush.org">volunteer@slush.org</a>
+        If you have any questions concerning volunteering at Slush 2015, please send them to <a href="mailto:volunteers@slush.org">volunteers@slush.org</a>
       </div>
     </div>
   </div>
@@ -121,7 +127,7 @@
                       </div>
                       <div>
                         <label>Link to your LinkedIn/Facebook profile page
-                          <input type="text">
+                          <input type="text" name="url">
                         </label>
                       </div>
                     </fieldset>
@@ -366,7 +372,7 @@
                     </fieldset>
 
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="submit-btn">Submit</button>
                   </form>
                   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
 
@@ -374,7 +380,7 @@
               </div>
               <div id="apply-submit" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
                 <div class="medium-8 medium-offset-2"><h2 id="modalTitle">Application submitted</h2>
-                  <p>Thank you for your application!</p>
+                  <p>Thanks for signing up as a volunteer! Every applicant will be informed of the outcome by 24.09.2015 the latest.</p>
 
                   <a class="close-reveal-modal" aria-label="Close">&#215;</a>
                 </div>
@@ -386,5 +392,18 @@
           <script src="bower_components/foundation/js/foundation.min.js"></script>
           <script src="js/alertify.js"></script>
           <script src="js/app.js"></script>
+          <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-42078471-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+          <script>
+          Raven.config('https://9b6c869e35fa45c8ba4f1ea55d4c5ac4@sentry.slush.org/8').install();
+          </script>
         </body>
         </html>
